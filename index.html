@@ -77,6 +77,19 @@ html[lang=ko] .addr,html[lang=ko] .near{word-break:keep-all}
 .ghost{min-height:46px;border-radius:12px;border:1px solid var(--gold);color:var(--gold-ink);font-weight:700;font-size:14.5px;background:var(--card)}
 .inapp{display:none;margin-top:10px;font-size:12.5px;line-height:1.45;color:var(--sub);background:#FFF8E6;border-radius:8px;padding:8px 10px}
 .is-inapp .inapp{display:block}
+.shop{display:block;width:100%;height:auto;border-radius:10px}
+.tips{list-style:none;margin-top:12px}
+.tips li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.5;margin-top:6px}
+.tips li:before{content:"";position:absolute;left:3px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.tips li.warn{color:var(--red-d);font-weight:700}
+.tips li.warn:before{background:var(--red)}
+.wide{display:flex;align-items:center;justify-content:center;width:100%;margin-top:12px}
+.way-h{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:16px;font-weight:800}
+.way-meta{margin-top:4px;font-size:13.5px;color:var(--gold-ink);font-weight:700}
+.steps{counter-reset:st;list-style:none;margin-top:10px}
+.steps li{counter-increment:st;position:relative;padding-left:34px;min-height:26px;font-size:14.5px;line-height:1.5;margin-top:8px}
+.steps li:before{content:counter(st);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-size:13px;font-weight:800;line-height:24px;text-align:center}
+html[lang=ko] .tips li,html[lang=ko] .steps li{word-break:keep-all}
 /* 联系行：微信、传真、账号 */
 .line{display:flex;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
 .line:first-child{border-top:0;padding-top:0}
@@ -190,6 +203,68 @@ html[lang=ko] .addr,html[lang=ko] .near{word-break:keep-all}
     </div>
   </section>
 
+  <section class="sec" aria-labelledby="h-way">
+    <h2 class="sec-h" id="h-way"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M10 21v-6h4v6"/></svg><span data-i="wayT"></span></h2>
+    <div class="panel">
+      <svg class="shop" viewBox="0 0 320 200" role="img" aria-labelledby="shopdesc">
+        <title id="shopdesc">Entrance</title>
+        <rect width="320" height="200" fill="#EEF3F7"/>
+        <!-- 左：街角粉色手机店，楼上牙科 -->
+        <rect x="0" y="30" width="86" height="130" fill="#B58A7A"/>
+        <rect x="6" y="40" width="74" height="18" rx="2" fill="#2F64B8"/><text x="43" y="53" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">고운이치과</text>
+        <rect x="0" y="108" width="86" height="52" fill="#D9487A"/><text x="43" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" data-t="phoneShop"></text>
+        <!-- 右上：隔壁楼上的卡拉 OK 大招牌（容易认错） -->
+        <rect x="190" y="18" width="130" height="34" fill="#D8D2C6"/>
+        <text x="198" y="41" font-size="15" font-weight="900" fill="#1F5FBF">KBS</text><text x="238" y="41" font-size="15" font-weight="900" fill="#C8243A">中華</text>
+        <circle cx="300" cy="22" r="10" fill="#fff" stroke="#C8243A" stroke-width="2"/><path d="M295 17l10 10M305 17l-10 10" stroke="#C8243A" stroke-width="2.2"/>
+        <text x="255" y="66" text-anchor="middle" font-size="9.5" fill="#7A2230" font-weight="700" data-t="karaoke"></text>
+        <!-- 右：沈阳烤牛肉 + 瓦片屋檐的海燕酱汤馆 -->
+        <rect x="190" y="76" width="130" height="84" fill="#E9DCC6"/>
+        <rect x="194" y="82" width="40" height="18" fill="#2B2B2B"/><text x="214" y="95" text-anchor="middle" font-size="8.5" fill="#E9C46A">沈阳烤牛肉</text>
+        <path d="M238 104 l8 -6 l8 6 l8 -6 l8 6 l8 -6 l8 6 l8 -6 l8 6 l8 -6 l6 4 v6 h-82 z" fill="#6E7378"/>
+        <text x="279" y="96" text-anchor="middle" font-size="9" font-weight="700" fill="#C8243A">海燕酱汤馆</text>
+        <rect x="248" y="114" width="30" height="46" fill="#C9A46B"/><rect x="282" y="114" width="30" height="46" fill="#C9A46B"/>
+        <!-- 中：白色门楼 = 入口 -->
+        <rect x="92" y="38" width="92" height="122" fill="#FBFBF8" stroke="#C9C3B5"/>
+        <rect x="88" y="34" width="100" height="8" fill="#D9D3C4"/>
+        <polygon points="132,44 144,44 151,51 151,63 144,70 132,70 125,63 125,51" fill="none" stroke="#B3364A" stroke-width="2.2"/>
+        <text x="138" y="88" text-anchor="middle" font-size="15" font-weight="900" fill="#C8243A" letter-spacing="1">中華大酒店</text>
+        <rect x="100" y="94" width="76" height="12" fill="#22262B"/><text x="138" y="103" text-anchor="middle" font-size="7.5" fill="#7CF29A">●●● LED ●●●</text>
+        <rect x="116" y="112" width="44" height="48" fill="#E7E2D8" stroke="#C9A646" stroke-width="2.5"/>
+        <path d="M138 118 v26 M131 137 l7 8 l7 -8" stroke="#B3364A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- 人行道 -->
+        <rect x="0" y="160" width="320" height="40" fill="#CFCAC0"/>
+        <!-- 标签：入口 -->
+        <rect x="76" y="168" width="124" height="24" rx="12" fill="#B3364A"/>
+        <text x="138" y="184" text-anchor="middle" font-size="11.5" font-weight="900" fill="#fff" data-t="enterHere"></text>
+      </svg>
+      <ul class="tips">
+        <li data-i="e1"></li>
+        <li data-i="e2"></li>
+        <li data-i="e3"></li>
+        <li class="warn" data-i="warn"></li>
+      </ul>
+      <a class="ghost wide" id="svLink" href="#" target="_blank" rel="noopener"><span data-i="svBtn"></span></a>
+
+      <h3 class="way-h"><span data-i="subwayT"></span></h3>
+      <p class="way-meta" data-i="subwayMeta"></p>
+      <ol class="steps">
+        <li data-i="s1"></li><li data-i="s2"></li><li data-i="s3"></li><li data-i="s4"></li>
+      </ol>
+      <a class="mapbtn naver wide" id="walkLink" href="#" target="_blank" rel="noopener"><i>N</i><span data-i="walkBtn"></span></a>
+
+      <h3 class="way-h"><span data-i="carT"></span></h3>
+      <ul class="tips">
+        <li data-i="c1"></li>
+        <li data-i="c2"></li>
+      </ul>
+      <div class="maps">
+        <a class="mapbtn naver" id="carNaver" href="#" target="_blank" rel="noopener"><i>N</i><span data-i="carNaver"></span></a>
+        <a class="mapbtn kakao" id="carKakao" href="#" target="_blank" rel="noopener"><i>K</i><span data-i="carKakao"></span></a>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" aria-labelledby="h-contact">
     <h2 class="sec-h" id="h-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg><span data-i="contactT"></span></h2>
     <div class="panel">
@@ -230,19 +305,24 @@ html[lang=ko] .addr,html[lang=ko] .near{word-break:keep-all}
 (function () {
   'use strict';
   var T = {
-    zh: { sub: '中餐 · 宴会厅', call: '电话预约', mobile: '手机', mapT: '地图 · 交通', addr: '首尔特别市 永登浦区 大林路29街 13（大林洞 717）地下 1 层', near: '地铁大林站：7 号线 10 号出口、2 号线 6 号出口附近', naver: 'Naver 地图', kakao: 'Kakao 地图', copyAddr: '复制地址', driver: '给司机看', inapp: '地图打不开时：点右上角「···」，选「在浏览器打开」', contactT: '微信 · 传真', wechat: '微信', fax: '传真', wechatTip: '复制微信号后，在微信「添加朋友」里粘贴搜索', bankT: '银行转账', bankName: '新韩银行 신한은행', holder: '户名', copy: '复制', copied: '已复制', copyFail: '复制不了，请长按文字复制', hallT: '宴会厅', hallCap: '店内宴会厅', foot: '首尔 · 大林站', driverTitle: '请把这个给出租车司机看', close: '关闭',
-      m: { line7: '7号线 大林站', line2: '2号线 大林站', ex11: '11号出口', ex10: '10号出口', ex6: '6号出口', hosp: '明知圣母医院', bakery: '巴黎贝甜', park: '公园', here: '中華大酒店' } },
-    ko: { sub: '중식 · 연회장', call: '전화 예약', mobile: '휴대폰', mapT: '지도 · 오시는 길', addr: '서울특별시 영등포구 대림로29길 13 (대림동 717), 지하 1층', near: '대림역 7호선 10번 출구 · 2호선 6번 출구 인근', naver: '네이버 지도', kakao: '카카오맵', copyAddr: '주소 복사', driver: '기사님께 보여주기', inapp: '지도가 안 열리면 오른쪽 위 「···」 → 「다른 브라우저로 열기」', contactT: '위챗 · 팩스', wechat: '위챗 WeChat', fax: '팩스', wechatTip: '아이디를 복사해 위챗 「친구 추가」에서 검색하세요', bankT: '계좌 이체', bankName: '신한은행', holder: '예금주', copy: '복사', copied: '복사됐어요', copyFail: '복사가 안 돼요. 길게 눌러 복사해 주세요', hallT: '연회장', hallCap: '매장 연회장', foot: '서울 · 대림역', driverTitle: '택시 기사님께 보여 주세요', close: '닫기',
-      m: { line7: '7호선 대림역', line2: '2호선 대림역', ex11: '11번 출구', ex10: '10번 출구', ex6: '6번 출구', hosp: '명지성모병원', bakery: '파리바게뜨', park: '공원', here: '중화대주점' } },
-    en: { sub: 'Chinese Restaurant · Banquet Hall', call: 'Call to book', mobile: 'Mobile', mapT: 'Map & Directions', addr: 'B1, 13 Daerim-ro 29-gil (717 Daerim-dong), Yeongdeungpo-gu, Seoul', near: 'Near Daerim Station — Line 7 Exit 10 / Line 2 Exit 6', naver: 'Naver Map', kakao: 'Kakao Map', copyAddr: 'Copy address', driver: 'Show to taxi driver', inapp: 'If the map does not open, tap ··· (top right) and choose “Open in browser”.', contactT: 'WeChat · Fax', wechat: 'WeChat', fax: 'Fax', wechatTip: 'Copy an ID, then paste it in WeChat › Add Contacts.', bankT: 'Bank transfer', bankName: 'Shinhan Bank', holder: 'Account holder', copy: 'Copy', copied: 'Copied', copyFail: 'Could not copy — press and hold the text to copy', hallT: 'Banquet hall', hallCap: 'Our banquet hall', foot: 'Seoul · Daerim Station', driverTitle: 'Please show this to the taxi driver', close: 'Close',
-      m: { line7: 'Line 7 Daerim', line2: 'Line 2 Daerim', ex11: 'Exit 11', ex10: 'Exit 10', ex6: 'Exit 6', hosp: 'Myongji St. Mary’s Hospital', bakery: 'Paris Baguette', park: 'Park', here: 'Junghwa Daejujeom' } },
-    ja: { sub: '中華料理・宴会場', call: '電話予約', mobile: '携帯', mapT: '地図・アクセス', addr: 'ソウル特別市 永登浦区 大林路29キル 13（大林洞717）地下1階', near: '大林駅 7号線10番出口・2号線6番出口付近', naver: 'NAVER地図', kakao: 'カカオマップ', copyAddr: '住所をコピー', driver: '運転手に見せる', inapp: '地図が開かない場合：右上の「···」から「ブラウザで開く」を選んでください', contactT: 'WeChat・FAX', wechat: 'WeChat', fax: 'FAX', wechatTip: 'IDをコピーして、WeChatの「友だち追加」で検索してください', bankT: '銀行振込', bankName: '新韓銀行 신한은행', holder: '口座名義', copy: 'コピー', copied: 'コピーしました', copyFail: 'コピーできません。長押しでコピーしてください', hallT: '宴会場', hallCap: '店内の宴会場', foot: 'ソウル・大林駅', driverTitle: 'タクシーの運転手に見せてください', close: '閉じる',
-      m: { line7: '7号線 大林駅', line2: '2号線 大林駅', ex11: '11番出口', ex10: '10番出口', ex6: '6番出口', hosp: '明知聖母病院', bakery: 'パリバゲット', park: '公園', here: '中華大酒店' } }
+    zh: { wayT: '怎么来 · 入口', e1: '认准白色门楼：正面红字「中華大酒店」，顶上是八角店标，下面有 LED 走字屏', e2: '从金色门框的玻璃门进去，下到地下 1 层', e3: '左边是街角粉红色手机店（楼上「고운이치과」牙科），右边是「沈阳烤牛肉」和瓦片屋檐的「海燕酱汤馆」', warn: '旁边楼上的「KBS 中華 노래연습장」是卡拉 OK，不是本店', svBtn: '看真实街景（Naver）', subwayT: '坐地铁', subwayMeta: '大林站 10 号出口（2、7 号线都能到）· 步行约 5 分钟（约 300 米）', s1: '从 10 号出口出来，沿大路往前走', s2: '走到「巴黎贝甜（파리바게뜨）」路口，转进旁边的小路', s3: '一直往前，经过 GS25 便利店', s4: '右手边白色门楼「中華大酒店」就是入口；走到街角粉红色手机店就是走过了', walkBtn: '步行路线（Naver）', carT: '开车', c1: '导航目的地搜「중화대주점」或地址「대림로29길 13」', c2: '停车位置和收费，请先打电话问店里', carNaver: 'Naver 路线', carKakao: 'Kakao 地图', sub: '中餐 · 宴会厅', call: '电话预约', mobile: '手机', mapT: '地图 · 交通', addr: '首尔特别市 永登浦区 大林路29街 13（大林洞 717）地下 1 层', near: '地铁大林站：7 号线 10 号出口、2 号线 6 号出口附近', naver: 'Naver 地图', kakao: 'Kakao 地图', copyAddr: '复制地址', driver: '给司机看', inapp: '地图打不开时：点右上角「···」，选「在浏览器打开」', contactT: '微信 · 传真', wechat: '微信', fax: '传真', wechatTip: '复制微信号后，在微信「添加朋友」里粘贴搜索', bankT: '银行转账', bankName: '新韩银行 신한은행', holder: '户名', copy: '复制', copied: '已复制', copyFail: '复制不了，请长按文字复制', hallT: '宴会厅', hallCap: '店内宴会厅', foot: '首尔 · 大林站', driverTitle: '请把这个给出租车司机看', close: '关闭',
+      m: { phoneShop: '手机店', karaoke: '卡拉 OK，不是本店', enterHere: '入口 · 地下 1 层', line7: '7号线 大林站', line2: '2号线 大林站', ex11: '11号出口', ex10: '10号出口', ex6: '6号出口', hosp: '明知圣母医院', bakery: '巴黎贝甜', park: '公园', here: '中華大酒店' } },
+    ko: { wayT: '오시는 길 · 입구', e1: '흰색 문 건물이 입구예요: 빨간 글씨 「中華大酒店」, 위에 팔각 로고, 아래 LED 전광판', e2: '금색 테두리 유리문으로 들어와 지하 1층으로 내려오세요', e3: '왼쪽은 모퉁이 분홍색 휴대폰 매장(위층 고운이치과), 오른쪽은 「沈阳烤牛肉」과 기와 처마 「연길해연장국집」', warn: '옆 건물 위층 「KBS 中華 노래연습장」은 노래방이에요 (저희 식당 아님)', svBtn: '실제 거리뷰 보기 (네이버)', subwayT: '지하철', subwayMeta: '대림역 10번 출구 (2·7호선) · 도보 약 5분 (약 300m)', s1: '10번 출구로 나와 큰길을 따라 걸어요', s2: '「파리바게뜨」 앞에서 옆 골목으로 들어가요', s3: 'GS25 편의점을 지나 쭉 직진', s4: '오른쪽 흰색 「中華大酒店」 문이 입구예요. 모퉁이 분홍 휴대폰 매장이 나오면 지나친 거예요', walkBtn: '도보 길찾기 (네이버)', carT: '자동차', c1: '내비게이션에서 「중화대주점」 또는 「대림로29길 13」 검색', c2: '주차 위치와 요금은 미리 전화로 문의해 주세요', carNaver: '네이버 길찾기', carKakao: '카카오맵', sub: '중식 · 연회장', call: '전화 예약', mobile: '휴대폰', mapT: '지도 · 오시는 길', addr: '서울특별시 영등포구 대림로29길 13 (대림동 717), 지하 1층', near: '대림역 7호선 10번 출구 · 2호선 6번 출구 인근', naver: '네이버 지도', kakao: '카카오맵', copyAddr: '주소 복사', driver: '기사님께 보여주기', inapp: '지도가 안 열리면 오른쪽 위 「···」 → 「다른 브라우저로 열기」', contactT: '위챗 · 팩스', wechat: '위챗 WeChat', fax: '팩스', wechatTip: '아이디를 복사해 위챗 「친구 추가」에서 검색하세요', bankT: '계좌 이체', bankName: '신한은행', holder: '예금주', copy: '복사', copied: '복사됐어요', copyFail: '복사가 안 돼요. 길게 눌러 복사해 주세요', hallT: '연회장', hallCap: '매장 연회장', foot: '서울 · 대림역', driverTitle: '택시 기사님께 보여 주세요', close: '닫기',
+      m: { phoneShop: '휴대폰 매장', karaoke: '노래방 (저희 아님)', enterHere: '입구 · 지하 1층', line7: '7호선 대림역', line2: '2호선 대림역', ex11: '11번 출구', ex10: '10번 출구', ex6: '6번 출구', hosp: '명지성모병원', bakery: '파리바게뜨', park: '공원', here: '중화대주점' } },
+    en: { wayT: 'Getting here · Entrance', e1: 'Look for the white gate: red letters “中華大酒店”, the octagon logo on top and an LED sign below.', e2: 'Go in through the gold-framed glass door and down to B1.', e3: 'Left: the pink phone shop on the corner (a dental clinic upstairs). Right: “沈阳烤牛肉” and a soup restaurant with a tiled eave.', warn: 'The “KBS 中華” sign upstairs next door is a karaoke, not us.', svBtn: 'See real street view (Naver)', subwayT: 'By subway', subwayMeta: 'Daerim Station Exit 10 (Lines 2 & 7) · about 5 min walk (≈300 m)', s1: 'Leave Exit 10 and walk along the main road.', s2: 'At Paris Baguette, turn into the side street.', s3: 'Keep straight past the GS25 store.', s4: 'The white “中華大酒店” gate on your right is the entrance. If you reach the pink phone shop on the corner, you went too far.', walkBtn: 'Walking route (Naver)', carT: 'By car', c1: 'Set your GPS to “중화대주점” or “대림로29길 13”.', c2: 'Please call ahead about parking.', carNaver: 'Naver route', carKakao: 'Kakao Map', sub: 'Chinese Restaurant · Banquet Hall', call: 'Call to book', mobile: 'Mobile', mapT: 'Map & Directions', addr: 'B1, 13 Daerim-ro 29-gil (717 Daerim-dong), Yeongdeungpo-gu, Seoul', near: 'Near Daerim Station — Line 7 Exit 10 / Line 2 Exit 6', naver: 'Naver Map', kakao: 'Kakao Map', copyAddr: 'Copy address', driver: 'Show to taxi driver', inapp: 'If the map does not open, tap ··· (top right) and choose “Open in browser”.', contactT: 'WeChat · Fax', wechat: 'WeChat', fax: 'Fax', wechatTip: 'Copy an ID, then paste it in WeChat › Add Contacts.', bankT: 'Bank transfer', bankName: 'Shinhan Bank', holder: 'Account holder', copy: 'Copy', copied: 'Copied', copyFail: 'Could not copy — press and hold the text to copy', hallT: 'Banquet hall', hallCap: 'Our banquet hall', foot: 'Seoul · Daerim Station', driverTitle: 'Please show this to the taxi driver', close: 'Close',
+      m: { phoneShop: 'Phone shop', karaoke: 'Karaoke — not us', enterHere: 'Entrance · B1', line7: 'Line 7 Daerim', line2: 'Line 2 Daerim', ex11: 'Exit 11', ex10: 'Exit 10', ex6: 'Exit 6', hosp: 'Myongji St. Mary’s Hospital', bakery: 'Paris Baguette', park: 'Park', here: 'Junghwa Daejujeom' } },
+    ja: { wayT: 'アクセス・入口', e1: '白い門が目印：赤い文字「中華大酒店」、上に八角形のロゴ、下に電光掲示板', e2: '金色の枠のガラス扉から入り、地下1階へお降りください', e3: '左は角のピンクの携帯ショップ（上階は歯科）、右は「沈阳烤牛肉」と瓦屋根のひさしのスープ店', warn: '隣のビル上階の「KBS 中華 노래연습장」はカラオケで、当店ではありません', svBtn: '実際のストリートビュー（NAVER）', subwayT: '地下鉄', subwayMeta: '大林駅 10番出口（2・7号線）・徒歩約5分（約300m）', s1: '10番出口を出て大通り沿いに進みます', s2: '「パリバゲット」の角で脇道に入ります', s3: 'GS25を過ぎてまっすぐ進みます', s4: '右手の白い門「中華大酒店」が入口です。角のピンクの携帯ショップまで来たら行き過ぎです', walkBtn: '徒歩ルート（NAVER）', carT: 'お車', c1: 'ナビで「중화대주점」または「대림로29길 13」を検索してください', c2: '駐車場は事前にお電話でお問い合わせください', carNaver: 'NAVER ルート', carKakao: 'カカオマップ', sub: '中華料理・宴会場', call: '電話予約', mobile: '携帯', mapT: '地図・アクセス', addr: 'ソウル特別市 永登浦区 大林路29キル 13（大林洞717）地下1階', near: '大林駅 7号線10番出口・2号線6番出口付近', naver: 'NAVER地図', kakao: 'カカオマップ', copyAddr: '住所をコピー', driver: '運転手に見せる', inapp: '地図が開かない場合：右上の「···」から「ブラウザで開く」を選んでください', contactT: 'WeChat・FAX', wechat: 'WeChat', fax: 'FAX', wechatTip: 'IDをコピーして、WeChatの「友だち追加」で検索してください', bankT: '銀行振込', bankName: '新韓銀行 신한은행', holder: '口座名義', copy: 'コピー', copied: 'コピーしました', copyFail: 'コピーできません。長押しでコピーしてください', hallT: '宴会場', hallCap: '店内の宴会場', foot: 'ソウル・大林駅', driverTitle: 'タクシーの運転手に見せてください', close: '閉じる',
+      m: { phoneShop: '携帯ショップ', karaoke: 'カラオケ（当店ではない）', enterHere: '入口・地下1階', line7: '7号線 大林駅', line2: '2号線 大林駅', ex11: '11番出口', ex10: '10番出口', ex6: '6番出口', hosp: '明知聖母病院', bakery: 'パリバゲット', park: '公園', here: '中華大酒店' } }
   };
   var HTML_LANG = { zh: 'zh-CN', ko: 'ko', en: 'en', ja: 'ja' };
-  var QUERY = '서울특별시 영등포구 대림동 717';
-  var NAVER = 'https://map.naver.com/p/search/' + encodeURIComponent(QUERY);
-  var KAKAO = 'https://map.kakao.com/link/search/' + encodeURIComponent(QUERY);
+  var NAVER = 'https://map.naver.com/p/entry/place/1116197464';
+  var NAVER_SV = 'https://map.naver.com/p/entry/place/1116197464?c=15.00,0,0,0,adh&p=IncFyWa8AGhmdkQLVdL65A,12.83,0.8,80,Float';
+  var NAVER_WALK = 'https://map.naver.com/p/directions/3zei2C,2AIZeH,%EB%8C%80%EB%A6%BC%EC%97%AD(%EA%B5%AC%EB%A1%9C%EA%B5%AC%EC%B2%AD)10%EB%B2%88%EC%B6%9C%EA%B5%AC,21406269,PLACE_POI/3zeiNI,2AJ48g,%EC%A4%91%ED%99%94%EB%8C%80%EC%A3%BC%EC%A0%90,1116197464,PLACE_POI/-/walk';
+  var NAVER_CAR = 'https://map.naver.com/p/directions/-/3zeiNI,2AJ48g,%EC%A4%91%ED%99%94%EB%8C%80%EC%A3%BC%EC%A0%90,1116197464,PLACE_POI/-/car';
+  // 坐标来自 Naver 步行导航（店门口 37.4954408, 126.8979122）：Kakao 直接把针插在店门口，开车直接导到门口
+  var SHOP = encodeURIComponent('중화대주점') + ',37.4954408,126.8979122';
+  var KAKAO = 'https://map.kakao.com/link/map/' + SHOP;
+  var KAKAO_TO = 'https://map.kakao.com/link/to/' + SHOP;
   var ua = navigator.userAgent || '';
   var inWeChat = /MicroMessenger/i.test(ua), inKakao = /KAKAOTALK/i.test(ua);
   var cur = 'ko';
@@ -309,6 +389,10 @@ html[lang=ko] .addr,html[lang=ko] .near{word-break:keep-all}
 
   document.getElementById('naverLink').setAttribute('href', NAVER);
   document.getElementById('mapLink').setAttribute('href', NAVER);
+  document.getElementById('svLink').setAttribute('href', NAVER_SV);
+  document.getElementById('walkLink').setAttribute('href', NAVER_WALK);
+  document.getElementById('carNaver').setAttribute('href', NAVER_CAR);
+  document.getElementById('carKakao').setAttribute('href', KAKAO_TO);
   document.getElementById('kakaoLink').setAttribute('href', KAKAO);
   if (inWeChat || inKakao) document.body.className += ' is-inapp';
 
